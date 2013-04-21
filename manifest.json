@@ -1,0 +1,21 @@
+{
+    "name": "KU Purchase Aut. Search",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Crawls kunet.dk and provides search functionality for the purchase aut list.",
+    "icons": { "48": "images/icon48.png" },
+    "permissions": ["https://intranet.ku.dk/indkoeb/finddinbestiller/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://intranet.ku.dk/indkoeb/finddinbestiller/*"],
+            "css": ["css/bootstrap.min.css", "css/search.css"],
+            "js": [
+                "js/jquery-1.9.1.min.js",
+                "js/taffy-min.js",
+                "js/crawler.js",
+                "js/ui.js",
+                "js/main.js"
+                ]
+        }
+    ]
+}
